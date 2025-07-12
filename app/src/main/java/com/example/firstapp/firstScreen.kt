@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -53,7 +55,7 @@ import androidx.compose.ui.unit.dp
 //Row learing
 
 @Composable
-fun layoutRow(modifier: Modifier = Modifier) {
+fun layoutLearing(modifier: Modifier = Modifier) {
 //    Row(modifier = Modifier.fillMaxSize(),
 //        verticalAlignment = Alignment.CenterVertically,
 //        horizontalArrangement = Arrangement.Center ) {
@@ -65,17 +67,30 @@ fun layoutRow(modifier: Modifier = Modifier) {
 //        }) { Text("Click Me ") }
 //    }
 
-    Box(modifier = Modifier.fillMaxSize()){
-        Image(painter = painterResource(R.drawable.ic_launcher_foreground),
-            contentDescription = null,
-            modifier=Modifier.width(200.dp).height(200.dp).align(Alignment.Center).background(color = colorResource( R.color.teal_200)))
 
-        Text("Android Studio", modifier = Modifier.align(Alignment.Center).padding(top = 90.dp), color = Color.White)
-    }
+    // Box Layout
+//    Box(modifier = Modifier.fillMaxSize()){
+//        Image(painter = painterResource(R.drawable.ic_launcher_foreground),
+//            contentDescription = null,
+//            modifier=Modifier.width(200.dp).height(200.dp).align(Alignment.Center).background(color = colorResource( R.color.teal_200)))
+//
+//        Text("Android Studio", modifier = Modifier.align(Alignment.Center).padding(top = 90.dp), color = Color.White)
+//    }
+
+
+    // LazyColumn
+//    LazyColumn{ items(count = 100){ index->
+//        Text("Food items $index", modifier=Modifier.padding(8.dp))
+//    }  }
+
+//    LazyRow { items(count = 20){ index->
+//        Text("Food List $index", modifier=Modifier.padding(32.dp))
+//    } }
+
 }
 
 @Composable
 @Preview(showSystemUi = true)
 fun layoutPrev(modifier: Modifier = Modifier) {
-    layoutRow()
+    layoutLearing()
 }
